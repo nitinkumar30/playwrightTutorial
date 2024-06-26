@@ -1,4 +1,3 @@
-import re
 from playwright.sync_api import Playwright, sync_playwright, expect
 
 
@@ -26,7 +25,7 @@ def run(playwright: Playwright) -> None:
         print("Logout button is visible!")
     except playwright._impl._errors.TimeoutError:
         print("Logout button is not visible within the timeout.")
-    # ---------------------
+
     context.close()
     browser.close()
 
